@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Light-Dark Mode
+        </title>
+        <style>
+            .title{
+                text-align: center;
+            }
+            .body-light{
+                color:black;
+                background-color: white;
+            }
+            .body-dark{
+                color: white;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body class="body-light" id="body">
+        <h1 class="title">
+            Toggle Bulb
+        </h1>
+        <button type="button" onClick="toggleLightTheme()">
+            LIGHT
+        </button>
+        <button type="button" onClick="toggleDarkTheme()">
+           DARK
+        </button>
+
+        <script>
+            function toggleDarkTheme()
+            {
+             const bodyElement = document.getElementById('body');
+             bodyElement.classList.remove('body-light');
+             bodyElement.classList.add('body-dark');
+            }
+            function toggleLightTheme()
+            {
+             const bodyElement = document.getElementById('body');
+             bodyElement.classList.remove('body-dark');
+             bodyElement.classList.add('body-light');
+             
+            }
+        </script>
+    </body>
+</html>
