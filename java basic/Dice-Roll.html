@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Roll dice
+        </title>
+        <style>
+            body{
+                background-color: skyblue;
+            }
+            .app-title{
+                text-align: center;
+                margin: 0 auto;
+            }
+            .dice-img{
+                height: 100px;
+                display: block;
+                margin: 20px auto;
+            }
+            .btn-roll{
+                display: block;
+                margin: 20px auto;
+                font-size: 20px;
+                cursor: pointer;
+                background-color: wheat;
+            }
+            .btn-roll:hover{
+               background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="app-title"> Dice Roller </h1>
+        <img src="./images/default.png" class="dice-img" id="dice"/>
+        <button class="btn-roll" onclick="roll()" > Roll The Dice</button>
+        <script>
+            function roll(){
+                const randomNumber = Math.floor(Math.random()*(6-1)+1);
+                console.log(randomNumber);
+                const diceImage = document.getElementById('dice');
+             if( randomNumber==1){
+            diceImage.src="./images/one.png";
+            }
+            else if( randomNumber==2){
+                diceImage.src ="./images/two.png";
+            }
+            else if( randomNumber==3){
+                diceImage.src ="./images/three.png";
+            }
+            else if( randomNumber==4){
+                diceImage.src ="./images/four.png";
+            }
+            else if( randomNumber==5){
+                diceImage.src ="./images/five.png";
+            }
+            else{
+                diceImage.src ="./images/six.png";
+            }
+        }
+        </script>
+    </body>
+</html>
