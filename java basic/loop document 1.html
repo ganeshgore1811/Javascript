@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            loop
+        </title>
+        <style>
+            body{
+                background-color: bisque;
+            }
+            .student-card{
+                border: 1px solid black;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 5px;
+                background-color: blueviolet;
+                color: white;
+                font-size: 20px;
+            }
+            .app-title{
+                text-align: center;
+                color: deepskyblue;
+            }
+            .list{
+                background-color: white;
+                padding: 10px;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="app-title">Student's List</h1>
+        <div class="list" id="list"></div>
+        <script>
+            const students = [ 'Ganesh','Mahesh','Ramesh','Manish','Dyanesh','Savita','Kavita'];
+            const listElement =document.getElementById("list");
+
+            for( let i=0; i<students.length; i++)
+            {
+                listElement.innerHTML +=`
+                <div class ='student-card'>
+                    Hello ${students[i]}
+                    </div>`;
+            }
+        </script>
+    </body>
+</html>
